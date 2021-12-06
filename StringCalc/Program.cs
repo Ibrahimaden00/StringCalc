@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 [assembly:InternalsVisibleTo("StringCalcTest")]
@@ -21,8 +22,12 @@ namespace StringCalculator
         public static int Add(string numbers)
         {
             if (string.IsNullOrEmpty(numbers)) return 0;
-            int num1 = int.Parse(numbers);
-            return num1;
+
+
+            
+
+
+            return numbers.Split(',','/').Sum(int.Parse);
         }
     }
 }
