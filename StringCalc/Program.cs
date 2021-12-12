@@ -23,11 +23,20 @@ namespace StringCalculator
         {
             if (string.IsNullOrEmpty(numbers)) return 0;
 
+            if (int.Parse(numbers) > 999)
+            {
+                return 0;
+            }
 
-            //P
+            if (!string.IsNullOrEmpty(numbers)) {
 
 
+                return numbers.Split(',', '/').Sum(int.Parse);
+            }
+            
+         
             return numbers.Split(',','/').Sum(int.Parse);
         }
+      
     }
 }
